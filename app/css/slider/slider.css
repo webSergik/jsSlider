@@ -1,0 +1,141 @@
+.slider {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+}
+
+.slider__images {
+  position: relative;
+  overflow: hidden;
+  box-sizing: content-box;
+  width: 600px;
+  white-space: nowrap;
+  border: 15px solid #fff;
+  box-shadow: 0 0 5px #ccc;
+}
+
+.slider__images_captions {
+  position: absolute;
+  bottom: 10px;
+  left: 5%;
+  display: flex;
+  width: 90%;
+  height: 60px;
+  white-space: normal;
+  color: #fff;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-family: "SegoeUILight";
+}
+
+.slider__images_captions_text {
+  width: 50%;
+}
+
+.slider__images_captions_link {
+  padding: 8px 10px;
+  border-radius: 3px;
+  color: #000;
+  transition: opacity 0.5s;
+  background: linear-gradient(to bottom, rgba(252, 234, 187, 1) 0%, rgba(252, 205, 77, 1) 40%, rgba(248, 181, 0,1) 59%, rgba(251, 223, 147, 1) 100%);
+  opacity: 0.9;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.slider__images_captions_button_wrapper {
+  display: flex;
+  width: 18%;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider__images_captions_content_wrapper {
+  display: flex;
+  width: 82%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.slider__images-items {
+  white-space: nowrap;
+  transition: all 1s;
+  position: relative;
+  height: 375px;
+  transform: translate3d(0, 0, 0);
+  img {
+    position: absolute;
+  }
+}
+
+.slider__pagination {
+  display: flex;
+  margin-top: 10px;
+}
+
+.slider__pagination-item {
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.slider__images-item {
+  z-index: -1;
+  opacity: 0;
+}
+
+.slider__images-item_active {
+  z-index: 1;
+  transition: all 0.5s;
+  opacity: 1;
+}
+
+.slider__pagination-link {
+  display: flex;
+  background: #666;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: all 0.2s;
+  &:hover {
+    background: gray;
+  }
+}
+
+.slider__pagination-link_active {
+  background: black;
+}
+
+.slider__direction-button {
+  z-index: 100;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+  outline: 0;
+}
+
+.slider__direction-button_prev-hor {
+  background: url('./../img/sprite/rewind.png');
+  background-color: transparent;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.slider__direction-button_next-hor {
+  background: url('./../img/sprite/rewind.png');
+  transform: rotateY(180deg);
+  background-color: transparent;
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
+}

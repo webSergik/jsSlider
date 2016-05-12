@@ -1,2 +1,3 @@
 @import "base/normalize.css";
-@import "slider.css";
+@import "base/fonts.css";
+@import "slider/slider.css";

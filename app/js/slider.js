@@ -8,10 +8,12 @@ class Slider {
     this.sliderPagination = document.createElement('ul');
     this.sliderPagination.className = 'slider__pagination';
     this.countImages = this.sliderImagesItem.length;
-    this.sliderPrev = document.createElement('button');
-    this.sliderNext = document.createElement('button');
-    this.sliderPrev.className = 'slider__direction-button slider__direction-button_prev-hor';
-    this.sliderNext.className = 'slider__direction-button slider__direction-button_next-hor';
+    // this.sliderPrev = document.createElement('button');
+    // this.sliderNext = document.createElement('button');
+    // this.sliderPrev.className = 'slider__direction-button slider__direction-button_prev-hor';
+    // this.sliderNext.className = 'slider__direction-button slider__direction-button_next-hor';
+    this.sliderPrev = document.querySelector('.slider__direction-button_prev-hor');
+    this.sliderNext = document.querySelector('.slider__direction-button_next-hor');
     this.currentSlide = 0;
     this.init();
     this.renderView(0);
@@ -23,8 +25,8 @@ class Slider {
       this.sliderImagesItems.appendChild(el);
     });
     this.createPagination();
-    this.sliderImages.appendChild(this.sliderPrev);
-    this.sliderImages.appendChild(this.sliderNext);
+    // this.sliderImages.appendChild(this.sliderPrev);
+    // this.sliderImages.appendChild(this.sliderNext);
     this.sliderPrev.addEventListener('click', () => this.prevSlide(), false);
     this.sliderNext.addEventListener('click', () => this.nextSlide(), false);
     this.sliderPagination.addEventListener('click', (e) => this.selectIndex(e), false);
